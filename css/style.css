@@ -60,7 +60,6 @@ body {
   padding-left: 20px;
 }
 .header_top a, .header_bottom a {
-  /* font-size: 120%; */
   text-decoration: none;
 }
 .fa-search {
@@ -71,6 +70,9 @@ body {
   padding: 5px 10px;
   border-radius: 5px;
   text-decoration: none;
+}
+.btn_large {
+  padding: 20px 50px;
 }
 .btn_orange {
   background-color: #fe775a;
@@ -89,7 +91,7 @@ body {
 }
 /* Inizio header inferiore */
 .header_bottom .right ul {
-  color:
+  color: #32495b;
 }
 /* tutte le proprietà dell'header inferiore sono state implementate nel codice superiore visto che si ripetevano */
 
@@ -112,21 +114,16 @@ body {
   padding-bottom: 50px;
   font-size: 100%;
 }
-.banner_text a {
-  padding: 20px 30px;
-  /* font-size: 120%; */
-}
 .banner_text .end_text {
   padding: 50px 0;
   font-size: 90%;
 }
-
+/* Inizio main sezione superiore */
 main section:first-child {
   width: 100%;
-  height: 800px;
   background-color: #f4f9fd;
 }
-.section_top {
+.section_top .cube_box {
   width: 60%;
   margin: 0 auto;
   text-align: center;
@@ -142,4 +139,62 @@ main section:first-child {
 }
 .section_top p {
   padding: 20px 0;
+}
+.section_top .horizontal_box {
+  width: 100%;
+  background-color: white;
+  border-radius: 3px;
+  padding: 8% 10%;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
+}
+/* Box orizzontale */
+.horizontal_box .item {
+  text-align: center;
+  width: 200px;
+  float: left;
+}
+.horizontal_box .image {
+  margin-bottom: 30px;
+}
+.horizontal_box .image img {
+  width: 90%;
+}
+.description {
+  width: 65%;
+  float: right;
+}
+.description h3 {
+  font-size: 200%;
+  padding-bottom: 15px;
+}
+.description h4 {
+  font-size: 150%;
+  text-transform: uppercase;
+  padding-bottom: 20px;
+  float: left;
+}
+.description hr {
+  float: right;
+  width: 55%;
+  border-top: 2px solid #899397;
+  margin: 17px 0;
+}
+.description ul{
+  list-style: none;
+}
+.description ul li {
+  display: inline-block;
+  margin-right: 25px;
+}
+/* Cambio il list-style utilizzando background image */
+.description ul li::before {
+  content: '';
+  display: inline-block;
+  height: 17px;
+  width: 17px;
+  background-size: 17px;
+  background-image: url('../img/check.png');
+  background-repeat: no-repeat;
+  margin-right: 15px;
+  vertical-align: middle;
 }
