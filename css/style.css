@@ -214,7 +214,7 @@ main section:first-child {
 }
 /* Inizio dei 3 box verticali del main */
 .box_container {
-  margin: 40px 0;
+  padding: 40px 0;
 }
 .vertical_box {
   width: calc(100% / 3 - (80px / 3)); /* Il box centrale ha un margin di 40px da entrambi i lati quindi 80px totali che vanno divisi per i 3 box e sottratti*/
@@ -241,4 +241,47 @@ main section:first-child {
 .vertical_box ul {
   text-align: left;
   padding-bottom: 50px;
+}
+/* Inizio seconda sezione */
+main section:nth-child(2) {
+  width: 100%;
+  color: white;
+  text-align: center;
+  background-image: linear-gradient(to right, #00a9b8, #00bba6);
+}
+.learn_grow h2 {
+  line-height: 50px;
+  padding: 40px 0;
+}
+.learn_grow_table {
+  padding: 60px 0 80px;
+}
+.learn_grow_table .cell {
+  width: calc(100% / 4);
+  color: white;
+  padding: 20px 0;
+  float: left;
+}
+.learn_grow_table .cell:first-child {
+  border-bottom: 1px solid white;
+}
+.learn_grow_table .cell:nth-child(2),
+.learn_grow_table .cell:nth-child(3),
+.learn_grow_table .cell:nth-child(4) {
+  border-left: 1px solid white;
+  border-bottom: 1px solid white;
+}
+.learn_grow_table .cell:nth-child(6),
+ .learn_grow_table .cell:nth-child(7),
+ .learn_grow_table .cell:nth-child(8) {
+  border-left: 1px solid white;
+}
+.learn_grow_table .cell h1::after {
+  content: '+';
+  font-size: 60%;
+  font-weight: 200;
+  vertical-align: middle;
+}
+.learn_grow_table .cell .icon_white {
+  min-height: 35px;
 }
