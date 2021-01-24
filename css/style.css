@@ -19,7 +19,7 @@
   width: 50%;
 }
 .w_3 {
-  width: calc(100% / 3);
+
 }
 
 body {
@@ -30,6 +30,20 @@ body {
   color: #33475b;
   margin-top: 70px;
 }
+
+h1 {
+  font-size: 300%;
+}
+h2 {
+  font-size: 250%;
+}
+h3{
+  font-size: 200%;
+}
+h4 {
+  font-size: 150%;
+}
+
 /* Inizio header superiore */
 .header_top {
   width: 100%;
@@ -106,7 +120,6 @@ body {
   z-index: -1;
 }
 .banner_text h1 {
-  font-size: 300%;
   line-height: 50px;
   padding: 50px 0 20px;
 }
@@ -134,18 +147,18 @@ main section:first-child {
 .section_top .cube img {
   height: 200px;
 }
-.section_top h2{
-  font-size: 250%;
-}
 .section_top p {
   padding: 20px 0;
 }
-.section_top .horizontal_box {
-  width: 100%;
+.box {
   background-color: white;
   border-radius: 3px;
-  padding: 8% 10%;
   box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
+}
+.section_top .horizontal_box {
+  width: 100%;
+  padding: 5% 10%;
+  margin-top: 30px;
 }
 /* Box orizzontale */
 .horizontal_box .item {
@@ -153,8 +166,8 @@ main section:first-child {
   width: 200px;
   float: left;
 }
-.horizontal_box .image {
-  margin-bottom: 30px;
+.horizontal_box .btn_item {
+  margin-top: 30px;
 }
 .horizontal_box .image img {
   width: 90%;
@@ -164,11 +177,9 @@ main section:first-child {
   float: right;
 }
 .description h3 {
-  font-size: 200%;
   padding-bottom: 15px;
 }
 .description h4 {
-  font-size: 150%;
   text-transform: uppercase;
   padding-bottom: 20px;
   float: left;
@@ -179,15 +190,18 @@ main section:first-child {
   border-top: 2px solid #899397;
   margin: 17px 0;
 }
-.description ul{
+.horizontal_box ul,
+.vertical_box ul {
   list-style: none;
 }
-.description ul li {
+.horizontal_box ul li,
+.vertical_box ul li {
   display: inline-block;
   margin-right: 25px;
 }
 /* Cambio il list-style utilizzando background image */
-.description ul li::before {
+.horizontal_box ul li::before,
+.vertical_box ul li::before {
   content: '';
   display: inline-block;
   height: 17px;
@@ -197,4 +211,34 @@ main section:first-child {
   background-repeat: no-repeat;
   margin-right: 15px;
   vertical-align: middle;
+}
+/* Inizio dei 3 box verticali del main */
+.box_container {
+  margin: 40px 0;
+}
+.vertical_box {
+  width: calc(100% / 3 - (80px / 3)); /* Il box centrale ha un margin di 40px da entrambi i lati quindi 80px totali che vanno divisi per i 3 box e sottratti*/
+  padding: 40px 40px 70px;
+  text-align: center;
+  float: left;
+}
+.vertical_box:nth-child(2){
+  margin: 0 40px;
+}
+.vertical_box .image img {
+  height: 130px;
+}
+.vertical_box p {
+  min-height: 200px;
+}
+.vertical_box hr {
+  border-top: 2px solid #899397;
+}
+.vertical_box h4 {
+  text-transform: uppercase;
+  padding: 30px 0;
+}
+.vertical_box ul {
+  text-align: left;
+  padding-bottom: 50px;
 }
