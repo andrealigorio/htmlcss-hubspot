@@ -25,7 +25,7 @@ body {
   font-size: 16px;
   font-weight: 500;
   color: #33475b;
-  margin-top: 70px;
+  margin-top: 70px; /* Nav superiore fixed */
 }
 
 h1 {
@@ -40,7 +40,15 @@ h3{
 h4 {
   font-size: 150%;
 }
-
+h5 {
+  font-size: 120%;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
 /* Inizio header superiore */
 .header_top {
   width: 100%;
@@ -73,9 +81,6 @@ h4 {
   display: inline-block;
   padding-left: 20px;
 }
-.header_top a, .header_bottom a {
-  text-decoration: none;
-}
 .fa-search {
   color: #00a4bd;
 }
@@ -85,24 +90,26 @@ h4 {
   border-radius: 5px;
   text-decoration: none;
 }
-.btn_large {
+.btn_large.btn {
   padding: 20px 50px;
 }
-.btn_orange {
+.btn_orange.btn {
   background-color: #fe775a;
   color: white;
 }
-.btn_grey {
-  background-color: #fafcfe;
+.btn_grey.btn {
+  background-color: #fafcfd;
   border: 1px solid #fe775a;
   color: #fe775a;
 }
 /* hover sui bottoni */
-.btn_grey:hover, .btn_orange:hover{
+.btn_orange:hover{
   background-color: rgba(254, 119, 90, 0.7);
-  color: white;
-  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
 }
+.btn_grey:hover {
+  background-color: rgba(254, 119, 90, 0.1);
+}
+
 /* Inizio header inferiore */
 .header_bottom {
   padding: 20px 0;
@@ -115,12 +122,11 @@ h4 {
 /* inizio banner */
 .banner {
   width: 100%;
-  height: 600px;
+  height: 652px;
   background-image: url('../img/jumbotron2.png');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: right;
-  z-index: -1;
 }
 .banner_text h1 {
   line-height: 50px;
@@ -128,7 +134,6 @@ h4 {
 }
 .banner_text p {
   padding-bottom: 50px;
-  font-size: 100%;
 }
 .banner_text .end_text {
   padding: 50px 0;
@@ -158,12 +163,12 @@ main section:first-child {
   border-radius: 3px;
   box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
 }
+/* Box orizzontale */
 .section_top .horizontal_box {
   width: 100%;
   padding: 5% 10%;
   margin-top: 30px;
 }
-/* Box orizzontale */
 .horizontal_box .item {
   text-align: center;
   width: 200px;
@@ -182,8 +187,10 @@ main section:first-child {
 .description h3 {
   padding-bottom: 15px;
 }
-.description h4 {
+.description h4, .vertical_box h4{
   text-transform: uppercase;
+}
+.description h4 {
   padding-bottom: 20px;
   float: left;
 }
@@ -193,14 +200,9 @@ main section:first-child {
   border-top: 2px solid #899397;
   margin: 17px 0;
 }
-.horizontal_box ul,
-.vertical_box ul {
-  list-style: none;
-}
 .horizontal_box ul li,
 .vertical_box ul li {
-  display: inline-block;
-  margin-right: 25px;
+  display: block;
 }
 /* Cambio il list-style utilizzando background image */
 .horizontal_box ul li::before,
@@ -237,8 +239,12 @@ main section:first-child {
 .vertical_box hr {
   border-top: 2px solid #899397;
 }
+.vertical_box h3 {
+  min-height: 70px;
+  line-height: 35px;
+  margin-top: 20px;
+}
 .vertical_box h4 {
-  text-transform: uppercase;
   padding: 30px 0;
 }
 .vertical_box ul {
@@ -293,8 +299,8 @@ main section:nth-child(2) {
   padding: 40px 80px;
   float: left;
 }
-.customers p {
-  padding: 20px 0;
+.customers h1 {
+  padding-bottom: 10px;
 }
 .brand_logos {
   width: 60%;
@@ -334,4 +340,84 @@ main section:nth-child(2) {
 }
 .photo img {
   height: 100%;
+}
+/* Inizio footer */
+footer {
+  width: 100%;
+  background-color: #32495b;
+}
+/* Tutti i tag a tranne i bottoni devono avere questa caratteristica al passaggio del mouse*/
+footer a:not(.btn):hover {
+  color: #00a9b8;
+}
+/* raggruppo proprietà color  */
+.info_item h5, .footer_bottom .copyright p {
+  color: white;
+}
+.info_item li a, .social_icon, .footer_languages li a, .privacy li a {
+  color: #cbd6e2;
+}
+/* fine */
+.information {
+  padding: 30px 0;
+}
+.information .info_item {
+  width: 25%;
+  padding-right: 20px;
+  float: left;
+}
+.info_item h5 {
+  padding-bottom: 10px;
+}
+.info_item li a {
+  line-height: 40px;
+}
+.btn_foot {
+  background-color: #cbd6e2;
+  color: #32495b;
+  padding: 10px 10px;
+  border: 1px solid white;
+}
+.info_item .btn_foot {
+  margin: 20px 0;
+}
+.information .btn_foot, .social_icon li, .footer_languages li, .privacy li {
+  display: inline-block;
+}
+.btn_foot:hover {
+  opacity: 80%;
+}
+.social_icon {
+  width: 100%;
+}
+.social_icon li {
+  padding-right: 25px;
+}
+.footer_languages {
+  text-align: center;
+  padding: 40px 0 10px;
+  margin-bottom: 30px;
+  border-bottom: 1px solid #cbd6e2;
+}
+.footer_languages li a {
+  padding: 0 10px;
+}
+.footer_bottom {
+  padding-bottom: 30px;
+}
+.footer_bottom .copyright {
+  float: left;
+}
+.footer_bottom .copyright p {
+  line-height: 15px;
+  font-weight: 200;
+}
+.copyright p span::after {
+  content: '\00A9';
+}
+.footer_bottom .privacy {
+  float: right;
+}
+.footer_bottom .privacy li {
+  padding-left: 30px;
 }
